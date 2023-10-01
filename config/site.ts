@@ -1,14 +1,15 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "CodePal - StringCompare",
+  version: "v0.1.0",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Find the differences between two texts, without having to worry about data protection.",
   mainNav: [
-    {
-      title: "Home",
-      href: "/",
-    },
+    // {
+    //   title: "Home",
+    //   href: "/",
+    // },
   ],
   links: {
     twitter: "https://twitter.com/shadcn",

@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import Link from "next/link"
+import { Badge } from "@/components/ui/badge"
 
 export const metadata: Metadata = {
   title: {
@@ -44,6 +46,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <hr/>
+              <div className="flex flex-row justify-between text-muted-foreground container py-5">
+                <p>©2023 Built by <Link href={siteConfig.links.github} target="_blank" rel="norefferer" className="underline">simonpltzw</Link></p>
+                <Badge variant="outline">{siteConfig.version}</Badge>
+              </div>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
